@@ -1,0 +1,68 @@
+baseURL = 'https://r401.adriencaubel.fr/'
+languageCode = 'fr-FR'
+title = 'R401 Architecture Logicielle'
+description = "Architecture Logicielle - IUT Rodez R401"
+theme = ["hugo-embed-pdf-shortcode", "hugo-theme-relearn"]
+enableInlineShortcodes = true
+relativeURLs = "True"
+enableRobotsTXT = true
+defaultContentLanguage = 'fr'
+
+[languages]
+  [languages.fr]
+    languageName = 'French'
+    title = 'Architecture Logicielle  R401'
+    weight = 1
+
+# For search functionality
+[outputs]
+  home = ["HTML", "RSS", "SEARCH", "SEARCHPAGE"]
+
+[params]
+  canonicalUrl = 'https://r401.adriencaubel.fr/'
+  author.name = "Adrien CAUBEL"
+  alwaysopen = true
+  showVisitedLinks = false
+  disableInlineCopyToClipBoard = true
+  disableNextPrev = true
+  ordersectionsby = "weight"
+  titleSeparator = "-"
+  externalLinkTarget = "_blank"
+  themeVariant='my-custom-variant-bis'
+  custom_css = ["https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"]
+
+# these values are hugo built in markup config
+[markup.highlight]
+  style = 'monokailight'
+  tabWidth = 4
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> Ressources"
+url = "more/resources/"
+weight = 1
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-fw fa-camera'></i> Adrien CAUBEL"
+url = "https://adriencaubel.fr/"
+weight = 5
+
+[[menu.shortcuts]]
+name = "<i class='fab fa-linkedin'></i> Linkedin"
+url = "https://www.linkedin.com/in/adriencaubel/"
+weight = 10
+
+[[menu.shortcuts]] 
+name = "<i class='fab fa-github'></i> Github"
+identifier = "ds"
+url = "https://github.com/Adrien-Courses/R401-website"
+weight = 15
+
+
+
+[security.exec]
+  allow = ['^asciidoctor$']

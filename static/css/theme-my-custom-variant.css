@@ -1,0 +1,34 @@
+/* my-custom-variant */
+:root {
+  --MAIN-LINK-color: rgba( 0, 130, 167, 1 ); /* link color of content */
+  --MAIN-LINK-HOVER-color: rgba( 0, 130, 167, 1 ); /* hoverd link color of content */
+  --MAIN-BG-color: rgba( 255, 255, 255, 1 ); /* background color of content */
+  --MAIN-TEXT-color: rgba( 50, 50, 50, 1 ); /* text color of content and h1 titles */
+  --MAIN-TITLES-TEXT-color: rgba( 94, 94, 94, 1 ); /* text color of h2-h6 titles and transparent box titles */
+  --MAIN-TITLES-H1-color: rgba( 34, 34, 34, 1 ); /* text color of h1 titles */
+  --CODE-theme: learn; /* name of the chroma stylesheet file */
+  --CODE-BLOCK-color: rgba( 226, 228, 229, 1 ); /* fallback text color of block code; should be adjusted to your selected chroma style */
+  --CODE-BLOCK-BG-color: rgba( 40, 42, 54, 1 ); /* fallback background color of block code; should be adjusted to your selected chroma style */
+  --CODE-BLOCK-BORDER-color: rgba( 40, 42, 54, 1 ); /* border color of block code */
+  --CODE-INLINE-color: rgba( 94, 94, 94, 1 ); /* text color of inline code */
+  --CODE-INLINE-BG-color: rgba( 255, 247, 221, 1 ); /* background color of inline code */
+  --CODE-INLINE-BORDER-color: rgba( 251, 240, 203, 1 ); /* border color of inline code */
+  --MENU-TOPBAR-BORDER-color: rgba( 174, 115, 157 ); /* border color of vertical line between menu and topbar */
+  --MENU-HEADER-BG-color: rgba( 174, 115, 157 ); /* background color of menu header */
+  --MENU-HEADER-BORDER-color: rgba( 208, 167, 183, 1 ); /* border color between menu header and menu */
+  --MENU-HOME-LINK-color: rgba( 224, 224, 224, 1 ); /* home button color if configured */
+  --MENU-HOME-LINK-HOVER-color: rgba( 240, 240, 240, 1 ); /* hoverd home button color if configured */
+  --MENU-SEARCH-BG-color: rgba( 139, 72, 139, 1 ); /* background color of search box */
+  --MENU-SEARCH-BORDER-color: rgba( 139, 72, 139, 1 ); /* border color of search box */
+  --MENU-SECTIONS-BG-color: rgba( 50, 42, 56, 1 ); /* background of the menu; this is NOT just a color value but can be a complete CSS background definition including gradients, etc. */
+  --MENU-SECTIONS-ACTIVE-BG-color: rgba( 37, 31, 41, 1 ); /* background color of the active menu section */
+  --MENU-SECTIONS-LINK-color: rgba( 204, 204, 204, 1 ); /* link color of menu topics */
+  --MENU-SECTIONS-LINK-HOVER-color: rgba( 230, 230, 230, 1 ); /* hoverd link color of menu topics */
+  --MENU-SECTION-ACTIVE-CATEGORY-color: rgba( 119, 119, 119, 1 ); /* text color of the displayed menu topic */
+  --MENU-SECTION-ACTIVE-CATEGORY-BG-color: rgba( 255, 255, 255, 1 ); /* background color of the displayed menu topic */
+  --MENU-SECTION-SEPARATOR-color: rgba( 42, 35, 47, 1 ); /* separator color between menu sections and menu footer */
+  --MENU-VISITED-color: rgba( 208, 167, 183, 1 ); /* icon color of visited menu topics if configured */
+  --BOX-CAPTION-color: rgba( 255, 255, 255, 1 ); /* text color of colored box titles */
+  --BOX-BG-color: rgba( 255, 255, 255, .833 ); /* background color of colored boxes */
+  --BOX-TEXT-color: rgba( 16, 16, 16, 1 ); /* text color of colored box content */
+}
