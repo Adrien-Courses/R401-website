@@ -5,6 +5,7 @@ weight = 10
 
 {{% notice style="tip" title="Ressources" icon="book" %}}
 - [https://www.jmdoudoux.fr/java/dej/chap-jdbc.htm](https://www.jmdoudoux.fr/java/dej/chap-jdbc.htm)
+- [José Paumard - API JDBC](https://www.youtube.com/playlist?list=PLzzeuFUy_Cnheztz2UEfV1UMeeowaevwt)
 {{% /notice %}}
 
 Java DataBase Connectivity (JDBC) est une API de bas niveau pour se connecter et interagir avec la base de données
