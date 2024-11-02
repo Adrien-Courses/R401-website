@@ -1,6 +1,8 @@
 +++
+archetype = "chapter"
 title = "JEE"
-weight = 60
+weight = 30
+isBoldTitle = true
 +++
 
 JEE est une collection de spécifications destinées à accomplir des tâches spécifiques. Ces spécifications sont définies par le programme Java Community Process (https://www.jcp.org).
