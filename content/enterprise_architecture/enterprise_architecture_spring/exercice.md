@@ -5,6 +5,7 @@ weight = 30
 
 {{% notice style="tip" title="Ressources" icon="book" %}}
 - [https://github.com/Adrien-Courses/R605-TP-JPA-SPRING](https://github.com/Adrien-Courses/R605-TP-JPA-SPRING)
+- [Don’t expose your JPA entities in your REST API](https://thorben-janssen.com/dont-expose-entities-in-api/)
 {{% /notice %}}
 
 **Note : pour avoir un auto-reload sans ajouter de dépendances, lancer le projet en mode Debug**
