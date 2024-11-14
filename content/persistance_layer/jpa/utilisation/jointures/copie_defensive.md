@@ -1,10 +1,12 @@
 +++
-title = "Copie défensive"
+title = "Copie défensive / Synchronisation"
 weight = 60
 +++
 
 {{% notice style="tip" title="Ressources" icon="book" %}}
 - [José Paumard - Protéger le contenu d'une relation multivaluée par copie défensive](https://youtu.be/dwX66leY3WM?list=PLzzeuFUy_CnhVfJIKyc3okTiiCc0anutx)
+- [How to synchronize bidirectional entity associations with JPA and Hibernate](https://vladmihalcea.com/jpa-hibernate-synchronize-bidirectional-entity-associations/)
+- [Save Child Objects Automatically Using JPA](https://www.baeldung.com/jpa-save-child-objects-automatically)
 {{% /notice %}}
 
 ```java
@@ -68,3 +70,5 @@ void setDepartement(Departement d) {
 ```
 
 La *copie défensive* impose donc de créer des méthodes permettant de muter ces éléments internes
+
+> The reason for this issue is that, for the bidirectional relationship, we need to explicitly specify the reference to the parent entity.
