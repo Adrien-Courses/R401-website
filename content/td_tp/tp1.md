@@ -7,7 +7,7 @@ weight = 10
 > https://github.com/Adrien-Courses/R401-TP-celsuis-fahrenheit
 
 
-## 2. Consignes
+## Consignes
 Nous souhaitons un formulaire permettant de convertir des Celsius and Fahrenheit.
 
 1. Dessiner le Schéma MVC de l'application
