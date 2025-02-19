@@ -8,7 +8,7 @@ weight = 10
 
 
 ## Consignes
-Nous souhaitons un formulaire permettant de convertir des Celsius and Fahrenheit.
+Nous souhaitons un endpoint `/convert?temperature=30` permettant de convertir des Celsius and Fahrenheit.
 
 1. Dessiner le Schéma MVC de l'application
 2. Coder
