@@ -1,6 +1,6 @@
 +++
-title = "TP2 Servlet et DP Factory"
-weight = 20
+title = "TP3 Servlet et DP Factory"
+weight = 30
 +++
 
 > [!ressource] Ressource
