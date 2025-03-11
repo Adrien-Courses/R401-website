@@ -3,6 +3,11 @@ title = "Architecture"
 weight = 20
 +++
 
+> [!ressource] Ressources
+> - [Les API Web avec JAX-RS](https://gayerie.dev/epsi-b3-javaee/javaee_web/jaxrs.html)
+> - [Backend : https://github.com/Adrien-Courses/R401-EXO-JAXRS](https://github.com/Adrien-Courses/R401-EXO-JAXRS)
+> - [Frontend : https://github.com/Adrien-Courses/R401-EXO-JAXRS-frontend](https://github.com/Adrien-Courses/R401-EXO-JAXRS-frontend)
+
 ![](architecture_simple.png)
 
 ![](architecture_detaillee.png)
@@ -11,15 +16,7 @@ weight = 20
 ### Backend
 Une api backend qui est exposé sur `localhost:8080/api/hello`
 ```java
-@ApplicationPath("/api")
-public class RestApplication extends Application {
-    @Override
-    public Set<Class<?>> getClasses() {
-        return Collections.singleton(HelloResource.class);
-    }
-}
-
-@Path("hello")
+@Path("/api/hello")
 class HelloResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -56,8 +53,8 @@ export default function App() {
 ```
 
 ### Conséquence
-Il faut une gestion des routes côté frontend et côté backend, mais elles peuvent se nommer différent.
-L'avantage est que le backend va fournir un ensemble de route pour récupérer, insérer des données et le frontend va les exploiter, en agréger plusieurs pour n'en exposer qu'une seule.
+Il faut une gestion des routes côté frontend et côté backend, mais elles peuvent se nommer différemment.
+L'avantage est que le backend va fournir un ensemble de routes pour récupérer, insérer des données et le frontend va les exploiter, en agréger plusieurs pour n'en exposer qu'une seule.
 
 Par exemple, une page pour accéder à une commande sera accessible depuis `GET monsite.fr/commande` (front-end) mais plusieurs route backend seront appeler :
 - premièrement `GET /commande/12345` pour récupérer les informations de la commande
