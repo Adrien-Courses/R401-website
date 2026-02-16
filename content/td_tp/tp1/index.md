@@ -31,6 +31,9 @@ Coder l'ensemble des 3 éléments
 
 
 ### 3. Complément
+
+> Rendez-vous sur la branche `git checkout final-no-embed`
+
 Jusqu’à présent, nous avons utilisé tomcat-embed afin de simuler le fonctionnement d’un serveur Tomcat directement depuis notre application Java. Cette approche est très pratique pour comprendre le rôle du conteneur de servlets, manipuler le cycle de vie d’une application web et expérimenter localement sans installation supplémentaire.
 
 Cependant, dans un contexte réel de développement et de mise en production, on ne démarre pas un serveur Tomcat depuis une méthode main. En pratique, l’application est empaquetée (généralement au format WAR) puis déployée sur un véritable serveur d’applications comme Tomcat ou TomEE, installé et configuré indépendamment du code.
