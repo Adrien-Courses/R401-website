@@ -24,7 +24,7 @@ Avant de coder, faire le schéma MVC de l'application
 ### 2. Développer
 Coder l'ensemble des 3 éléments
 - La classe Modèle est déjà donnée
-- La classe Contrôleur soit être complétée
+- La classe Contrôleur doit être complétée
 - Le fichier `resultat.jsp` doit être codé dans `src/main/webapp/`
 
 => Vous pouvez vous inspirer du cours sur le [JPS]({{< relref "presentation_layer/servlet_jsp/jsp" >}})
@@ -42,7 +42,7 @@ Nous allons donc maintenant passer d’une approche “embarquée” à une appr
 
 #### 3.1 Générer une archive `war`
 
-La première étape consiste a généré un exécutable de notre application sous la forme d'un `war`. Pour ce faire ouvrir un invité de commande et saisir `mvn clean package` ou dans IntelliJ -> menu de gauche -> clean puis -> package
+La première étape consiste a généré un exécutable de notre application sous la forme d'un `war`. Pour ce faire ouvrir un invité de commande et saisir `mvn clean package` ou dans IntelliJ -> menu de droite -> clean puis -> package
 
 ![complement.png](td_tp/tp1/images/complement.png)
 
