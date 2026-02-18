@@ -25,7 +25,15 @@ Avant de coder, faire le schéma MVC de l'application
 Coder l'ensemble des 3 éléments
 - La classe Modèle est déjà donnée
 - La classe Contrôleur doit être complétée
-- Le fichier `resultat.jsp` doit être codé dans `src/main/webapp/`
+
+##### 2.1 La servlet en retourne du HTML
+En premier vous allez retourner du HTML dans la Servlet
+
+##### 2.2 La servlet fait une redirection
+Au lieu d'avoir du HTML codé en dur dans la Servlet, nous allons le coder dans le fichier `result.jsp`
+
+
+- Le fichier `result.jsp` doit être codé dans `src/main/webapp/`
 
 => Vous pouvez vous inspirer du cours sur le [JPS]({{< relref "presentation_layer/servlet_jsp/jsp" >}})
 
