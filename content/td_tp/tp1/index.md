@@ -35,7 +35,7 @@ Au lieu d'avoir du HTML codé en dur dans la Servlet, nous allons le coder dans 
 
 - Le fichier `result.jsp` doit être codé dans `src/main/webapp/`
 
-=> Vous pouvez vous inspirer du cours sur le [JPS]({{< relref "presentation_layer/servlet_jsp/jsp" >}})
+=> Vous pouvez vous inspirer du cours sur le [JSP]({{< relref "presentation_layer/servlet_jsp/jsp" >}})
 
 
 ### 3. Complément
