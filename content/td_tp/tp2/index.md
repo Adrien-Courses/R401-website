@@ -12,27 +12,28 @@ Nous souhaitons créer un site de e-boutique, permettant au utilisateur d'ajoute
 - calculer le montant total
 - pouvoir supprimer un article du panier
 
-http://localhost:8080/R401-TP-e-boutique/
+### Résultat attendu
+Sur la page catalogue, les articles sont affichés et un bouton permet de l'ajouter au panier
 
-### Endpoint /catalogue
-![catalogue](catalogue.png)
+![catalogue](td_tp/tp2/images/catalogue.png)
 
-- Lorsqu'on clique sur ajouté, on reste sur la page mais le nombre d'article augmente (ici 3 articles)
+Puis sur la page panier, on peut consulter les articles ajoutés
 
-### Endpoint /afficherPanier
-![panier](panier.png)
+![panier](td_tp/tp2/images/panier.png)
 
-## 1. Créer le Model
-Définir le Model de notre application, c'est-à-dire les classes métiers et les opérations métiers *ajouter un article* et *supprimer un article*
 
-- Deux articles sont égaux, si leur id sont identiques
+## 1. Créer le catalogue
+- Compléter les *TODO* dans `catalogue.jsp` afin de rajouter des boutons pour ajouter l'article au panier (servlet `/panier`)
+	
+	
+### Aide
+- Les boutons seront des formulaires HTML contenant l'ensemble des informations : id, nom et prix de l'article
+- Puis compléter la méthode `doPost` de `PanierServlet`
+	1. Récupérer les paramètre du formulaire
+	2. Créer un objet `Article` avec
+	3. Récupérer ou créer un panier en session
+	4. Y ajouter l'article
 
-## 2. Définir l'endpoint /ajouterAuPanier
-Cet endpoint sera appeler depuis le bouton "Ajouter au panier" présent sur chaque article du catalogue.
-
-- Quels attributs va-t-on récupérer de la requête ?
-- Comment va-t-on ajouter au panier ? et faire en sorte que le panier ne soit pas perdu
-- Lorsqu'on ajoute au panier, on reste sur la page catalogue
 
 <!--
 protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -76,58 +77,61 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
 
 -->
 
-## 3. Afficher le catalogue
-Le catalogue est représenté par le fichier `catalogue.jsp`. Nous avons 3 articles de disponibles.
 
-- Comment créer nos articles ?
-  - Comment appeler l'endpoint `/ajouterAuPanier` ? 
-  - Quelles informations passer ?
+
+## 2. Afficher le panier
+L'affichage du panier est déjà codé dans `panier.jsf`. Le panier doit être stocké en session
+- Expliquez pourquoi le panier doit être stocké en session
+- Coder `doGet` pour stocker le panier en session
 
 <!--
-Pour chaque article, on définit un formulaire avec des champs caché
+```java
+	// Récupérer la session
+	HttpSession session = request.getSession(false); // false pour ne pas créer de session si on tombe dessus en
+	// premier
 
-<div class="produit">
-    <h3>Smartphone XYZ</h3>
-    <p>Prix: 599.99 euro</p>
-    <form action="${pageContext.request.contextPath}/ajouterAuPanier" method="post">
-        <input type="hidden" name="id" value="1">
-        <input type="hidden" name="nom" value="Smartphone XYZ">
-        <input type="hidden" name="prix" value="599.99">
-        <input type="submit" value="Ajouter au panier">
-    </form>
-</div>
+	if (session != null) {
+		// Récupérer le panier s'il existe
+		Panier panier = (Panier) session.getAttribute("panier");
+		if (panier == null) {
+			panier = new Panier();
+			session.setAttribute("panier", panier);
+		}
+	}
 
+	// Rediriger vers la page du panier
+	request.getRequestDispatcher("panier.jsp").forward(request, response);
+```
 -->
 
-Puis,
-- regarder l'utilisation dans `catalogue.jsp` de l'objet `sessionScope` pour récupérer le nombre d'article dans le panier
+## 3. Supprimer un article du panier
+
+La dernier étape consiste à pourquoi supprimer un article du panier
+
+Aide :
+- Même principe que l'ajout d'un article au panier
+- Attention, en HTML `method="delete"` n'existe pas, uniquement `get` et `post`
 
 <!--
-    <div>
-        <a href="${pageContext.request.contextPath}/afficherPanier">
-            Voir mon panier 
-            <c:if test="${not empty sessionScope.panier}">
-                (${sessionScope.panier.nombreArticles} article(s))
-            </c:if>
-        </a>
-    </div>
--->
-
-## 4. Définir l'endpoint /afficherPanier
-La page pour afficher le panier `panier.jsp` est déjà existante.
-- Créer la servlet pour l'appeler
-
-## 5. Définir l'endpoint /supprimerArticle
-Depuis la page `panier.jsp` on peut supprimer la ligne article. Créer l'endpoint
-
-<!--
-// formulaire caché
-<form action="${pageContext.request.contextPath}/supprimerArticle" method="post">
-    <input type="hidden" name="id" value="${article.id}">
-    <input type="submit" value="Supprimer">
+// formulaire caché avec une action=delete
+<form action="${pageContext.request.contextPath}/panier" method="post">
+	<input type="hidden" name="id" value="${article.id}">
+	<input type="hidden" name="action" value="delete">
+	<input type="submit" value="Supprimer">
 </form>
 
-Puis via l'id on supprime l'article (pas besoin de ce soucier des qte car la qte est recalculé dynamiquement)
+et dans le doPost on redirige vers doDelete
 
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		String action = request.getParameter("action");
+
+		if ("delete".equals(action)) {
+			doDelete(request, response);
+		}
+		... ...
+	}
 
 -->
