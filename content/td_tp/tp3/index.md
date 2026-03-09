@@ -7,12 +7,9 @@ weight = 20
 > https://github.com/Adrien-Courses/R401-TP-Compte-Bancaire
 
 ## Objectifs
-Nous souhaitons créer un ensemble d'endpoint pour la gestion des comptes bancaire
-- nous prêterons attention à l'anti-pattern [Anemic Domain Model](https://martinfowler.com/bliki/AnemicDomainModel.html)
+Nous souhaitons créer un ensemble d'endpoint pour la gestion des comptes bancaire avec des API Rest.
 
-http://localhost:8080/R401-TP-Compte-bancaire-0.0.1-SNAPSHOT/hello
-
-## Développement 
+## Structuration du projet 
 L'organisation de nos packages est la suivante
 - le package `domain` contiendra toute la logique métier
 - le package `application` contiendra la logique application (e.g. enregistrer en base de données)
@@ -39,6 +36,20 @@ L'organisation de nos packages est la suivante
  ┃ ┃ ┃ ┣ 📜 RestService.java
 ```
 
+### Lancer le projet
+Pour lancer le projet, vous devez déclarer une nouvelle configuration maven dans IntelliJ ou Eclipse en précisant `clean package tomee:run`
+
+![alt text](configuration.png)
+
+![alt text](configuration_eclipse.png)
+
+http://localhost:3363/R401-TP-Compte-bancaire-0.0.1-SNAPSHOT/hello
+
+### Autoreload du projet
+A noter que vous n'êtes pas obligé de redémarré le serveur TomEE si vous faites des modification.
+Dans IntelliJ Build --> Build Project va mettre à jour les `.class` et TomEE prendra directement ces modifications
+
+## Développer
 ### Récupérer de l'argent
 Coder la fonctionnalité permettant de récupérer de l'argent.
 
